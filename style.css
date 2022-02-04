@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+width: 100%;
+max-width: 500px;
+height: 600px;
+margin: auto;
+margin-top: 15%;
+background-color: rgb(105, 105, 105);
+}
+
+#screen {
+    font-size: 20vw;
+}
+
+.light-class{
+    background:rgb(255, 255, 255);
+}
+
+#lightmode {
+    width: 15%;
+    height: 20%;
+    display: flex;
+    background-color: rgb(118, 118, 118);
+    cursor: pointer;
+}
+
+#light, #dark{
+    height: 100%;
+    transition: .5s;
+    font-size: 3vw;
+    text-align: center;
+    padding-top: 5%;
+}
+
+#dark{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+
+#light{
+    background-color: rgb(255, 255, 255);
+}
+
+#button{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 16% 16% 16% 16% 16% 20%;
+    height: 80%;
+}
+
+.number, .sign{
+    font-size: 5vw;
+    color: rgb(179, 179, 212);
+    background: rgb(29, 29, 29);
+    box-shadow:5px 5px 5px rgb(82, 82, 82),-5px -5px 5px rgb(29, 29, 29);
+    margin: 2%;
+    transition: .2s;
+}
+
+.number-light, .sign-light{
+    color: rgb(0, 0, 0);
+    background: rgb(192, 192, 192);
+    box-shadow:5px 5px 5px rgb(0, 0, 0),-5px -5px 5px rgb(95, 95, 95);
+    transition: .2s;
+}
+
+.number:active, .sign:active {
+    background: rgb(46, 46, 46);
+    box-shadow: 5px 5px 5px rgb(255, 255, 255), -5px -5px 5px rgb(99, 99, 99);
+}
+
+.cl:active {
+    background: rgb(32,1,1);
+    box-shadow:5px 5px 5px rgb(0, 0, 0), -5px -5px 5px rgb(56, 56, 56); 
+}
+
+
+.equal{
+    grid-column: 3/5;
+    color: rgb(255, 255, 255);
+    background: rgb(0, 2, 31);
+    box-shadow:10px 10px 10px rgb(56, 56, 56),-10px -10px 10px rgb(0, 0, 0);
+}
+
+.del:active, .equal:active{
+    background: rgb(0, 2, 31);
+    box-shadow: 5px 5px 5px rgb(85, 85, 85), -5px -5px 5px rgb(105, 105, 105);
+}
+
+@media screen and (min-width: 750px) {
+    .number, .sign{
+        font-size: 3vw;
+    }
+    #container{
+        margin-top: 0%;
+    }
+
+    #screen{
+        font-size: 8vw;
+    }
+
+    #lightmode{
+        width: 5%;
+    }
+    #light, #dark{
+        font-size: 1vw;
+        padding: 13%;
+    }
+}
+
